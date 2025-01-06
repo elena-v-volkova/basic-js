@@ -10,7 +10,11 @@ const { NotImplementedError } = require("../extensions/index.js");
  * For the input 'prettyandsimple@example.com', the output should be 'example.com'
  *
  */
-function getEmailDomain(email) {}
+function getEmailDomain(email) {
+  let pos = email.lastIndexOf("@");
+  let result = email.slice(pos + 1);
+  return result;
+}
 
 module.exports = {
   getEmailDomain,
